@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import Pagination from "@material-ui/lab/Pagination";
 
 import JobCard from "./common/JobCard";
 import jobApi from "../api/jobs";
@@ -68,6 +69,13 @@ export default function JobListings() {
               <JobCard jobDescription={job} />
             </Grid>
           ))}
+          <Grid item xs={12} sm={12} md={12}>
+            <Pagination
+              count={5}
+              color="primary"
+              onChange={(e) => console.log(e.target)}
+            />
+          </Grid>
         </Grid>
       )}
     </>
