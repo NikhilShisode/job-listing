@@ -4,6 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +25,9 @@ export default function NavBar({ title }) {
           <Typography variant="h6" color="inherit" className={classes.title}>
             {title}
           </Typography>
-          <Button color="inherit">Post your Job</Button>
+          <Button color="inherit" component={Link} to="/job/new">
+            Post your Job
+          </Button>
         </Toolbar>
       </AppBar>
     </div>

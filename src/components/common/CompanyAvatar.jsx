@@ -19,7 +19,7 @@ export default function CompanyAvatar({ imageUrl, companyName }) {
       {imageUrl ? (
         <Avatar alt={companyName} src={imageUrl} />
       ) : (
-        <Avatar alt={companyName} />
+        <Avatar alt={companyName}>{companyName.substr(0, 1)}</Avatar>
       )}
     </div>
   );
