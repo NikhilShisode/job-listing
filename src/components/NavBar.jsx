@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,14 +22,16 @@ export default function NavBar({ title }) {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" color="inherit" className={classes.title}>
-            {title}
-          </Typography>
-          <Button color="inherit" component={Link} to="/job/new">
-            Post your Job
-          </Button>
-        </Toolbar>
+        <Container maxWidth="md">
+          <Toolbar>
+            <Typography variant="h6" color="inherit" className={classes.title}>
+              {title}
+            </Typography>
+            <Button color="inherit" component={Link} to="/job/new">
+              Post your Job
+            </Button>
+          </Toolbar>
+        </Container>
       </AppBar>
     </div>
   );

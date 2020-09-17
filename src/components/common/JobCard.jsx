@@ -12,6 +12,10 @@ import { CardHeader } from "@material-ui/core";
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
+    height: "100%",
+  },
+  clickableArea: {
+    height: "100%",
   },
   bullet: {
     display: "inline-block",
@@ -40,7 +44,11 @@ export default function JobCard({
 
   return (
     <Card className={classes.root} variant="outlined">
-      <CardActionArea component={Link} to={"c/" + companySlug + "/" + jobSlug}>
+      <CardActionArea
+        component={Link}
+        to={"c/" + companySlug + "/" + jobSlug}
+        className={classes.clickableArea}
+      >
         <CardHeader
           avatar={<CompanyAvatar imageUrl={imageUrl} companyName={company} />}
           title={company}

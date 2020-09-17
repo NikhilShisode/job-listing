@@ -61,7 +61,7 @@ export default function JobListings() {
           <CircularProgress size={80} />
         </div>
       ) : (
-        <Grid container xs={12} spacing={2} className={classes.root}>
+        <Grid container spacing={2} className={classes.root}>
           {jobs.map((job) => (
             <Grid item xs={12} sm={6} md={4} key={job.id}>
               <JobCard jobDescription={job} />
