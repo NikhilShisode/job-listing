@@ -1,4 +1,3 @@
-import grey from "@material-ui/core/colors/grey";
 import blue from "@material-ui/core/colors/blue";
 
 export default {
@@ -14,6 +13,14 @@ export default {
       main: "#f44336",
       dark: "#ba000d",
       contrastText: "#000",
+    },
+    background: {
+      // paper: "#2d353c",
+      default: "#2d353c",
+      appBar: "#2d353c",
+      contentFrame: "#2d353c",
+      chip: "#2d353c",
+      avatar: "#2d353c",
     },
   },
 };

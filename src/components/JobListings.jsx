@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
 
 import JobCard from "./common/JobCard";
 import jobApi from "../api/jobs";

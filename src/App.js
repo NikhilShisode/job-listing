@@ -11,7 +11,7 @@ function App() {
 
   return (
     <MuiThemeProvider theme={applyTheme}>
-      <NavBar title="job listing" />
+      <NavBar title="JobHunt" />
       <Container maxWidth="md">
         <Router />
       </Container>

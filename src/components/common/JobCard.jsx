@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 
 import CompanyAvatar from "./CompanyAvatar";
+import { CardHeader } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -23,6 +24,13 @@ const useStyles = makeStyles({
   pos: {
     marginBottom: 12,
   },
+  header: {
+    paddingTop: 5,
+    paddingBottom: 0,
+  },
+  content: {
+    paddingTop: 5,
+  },
 });
 
 export default function JobCard({
@@ -33,25 +41,17 @@ export default function JobCard({
   return (
     <Card className={classes.root} variant="outlined">
       <CardActionArea component={Link} to={"c/" + companySlug + "/" + jobSlug}>
-        <CardContent>
-          <CompanyAvatar imageUrl={imageUrl} companyName={company} />
-          <Typography
-            className={classes.title}
-            color="textSecondary"
-            gutterBottom
-          >
-            {company}
-          </Typography>
+        <CardHeader
+          avatar={<CompanyAvatar imageUrl={imageUrl} companyName={company} />}
+          title={company}
+          className={classes.header}
+        />
+        <CardContent className={classes.content}>
           <Typography variant="h5" component="h2">
             {title}
           </Typography>
           <Typography className={classes.pos} color="textSecondary">
             {location}
-          </Typography>
-          <Typography variant="body2" component="p">
-            well meaning and kindly.
-            <br />
-            {'"a benevolent smile"'}
           </Typography>
         </CardContent>
       </CardActionArea>
