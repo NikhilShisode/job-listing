@@ -8,10 +8,9 @@ import JobForm from "./components/JobForm";
 export default function Router() {
   return (
     <Switch>
-      <Route path="/job/:slug" component={JobForm} />
+      <Route path="/job" component={JobForm} />
       <Route path="/c/:companySlug/:jobSlug" component={JobDetail} />
-      <Route path="/jobs" component={JobListings} />
-      <Redirect path="/" to="/jobs" />
+      <Route path="/" component={JobListings} />
     </Switch>
   );
 }

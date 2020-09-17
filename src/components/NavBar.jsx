@@ -27,7 +27,7 @@ export default function NavBar({ title }) {
             <Typography variant="h6" color="inherit" className={classes.title}>
               {title}
             </Typography>
-            <Button color="inherit" component={Link} to="/job/new">
+            <Button color="inherit" component={Link} to="/job">
               Post your Job
             </Button>
           </Toolbar>
