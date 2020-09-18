@@ -73,6 +73,9 @@ export default function JobListings() {
         </div>
       ) : (
         <Grid container spacing={2} className={classes.root}>
+          {/* <Grid item xs={12} sm={12} md={12}>
+            Filter goes here
+          </Grid> */}
           {jobListings.map((job) => (
             <Grid item xs={12} sm={6} md={4} key={job.id}>
               <JobCard jobDescription={job} />
@@ -81,7 +84,6 @@ export default function JobListings() {
           <Grid item xs={12} sm={12} md={12}>
             <Pagination
               count={(jobs.length - (jobs.length % pageSize)) / pageSize + 1}
-              // page={currentPage}
               color="primary"
               onChange={(e, newPage) => handlePageChange(newPage)}
             />
